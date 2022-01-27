@@ -1,6 +1,12 @@
 import './App.css';
 import React from 'react';
 import { Dialog } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import jobsnet from './img/jobsnet.png';
 
@@ -23,7 +29,6 @@ function App() {
               <p className="footnote">Front end hospedado de forma gratuita, alguns links podem não funcionar. Qualquer problema reporte por e-mail.</p>
             </div>
           </Dialog>
-    
         );
       case 2:
         return (
@@ -35,7 +40,6 @@ function App() {
               <p>Front end hospedado de forma gratuita, alguns links podem não funcionar. Qualquer problema reporte por e-mail.</p>
             </div>
           </Dialog>
-    
         );
     }
 
@@ -161,12 +165,44 @@ function App() {
 
         <section id="third">
           <div className="content">
-            <div className="card">
-              <h3>Cadastro de Currículos - JobsNET
-              <button className="moreBtn" onClick={handleClickOpen}><AddCircleOutlineIcon/></button></h3>
-              <SimpleDialog selectValue={1} open={open} onClose={handleClose}/>
-              <img src={jobsnet} alt="JobsNET" className="img-proj"/>
-            </div>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                alt="JobsNET"
+                height="140"
+                image={jobsnet}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Cadastro de Currículos - JobsNET
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" onClick={handleClickOpen}>Mais</Button>
+                <SimpleDialog selectValue={1} open={open} onClose={handleClose} />
+              </CardActions>
+            </Card>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                alt="JobsNET"
+                height="140"
+                image={jobsnet}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Cadastro de Currículos - JobsNET
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" onClick={handleClickOpen}>Mais</Button>
+                <SimpleDialog selectValue={1} open={open} onClose={handleClose} />
+              </CardActions>
+            </Card>
+            {/* <h3>
+              <button className="moreBtn" onClick={handleClickOpen}><AddCircleOutlineIcon /></button></h3>
+            <SimpleDialog selectValue={1} open={open} onClose={handleClose} />
+            <img src={jobsnet} alt="JobsNET" className="img-proj" /> */}
           </div>
         </section>
 
