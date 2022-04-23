@@ -59,19 +59,19 @@ function App() {
       setOpen(false);
     }
 
-  function aboutMe(evt, item) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByclassNameName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByclassNameName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].classNameName = tablinks[i].classNameName.replace(" active", "");
-    }
-    document.getElementById(item).style.display = "block";
-    evt.currentTarget.classNameName += " active";
-  }
+  // function aboutMe(evt, item) {
+  //   var i, tabcontent, tablinks;
+  //   tabcontent = document.getElementsByclassNameName("tabcontent");
+  //   for (i = 0; i < tabcontent.length; i++) {
+  //     tabcontent[i].style.display = "none";
+  //   }
+  //   tablinks = document.getElementsByclassNameName("tablinks");
+  //   for (i = 0; i < tablinks.length; i++) {
+  //     tablinks[i].classNameName = tablinks[i].classNameName.replace("active", "");
+  //   }
+  //   document.getElementById(item).style.display = "block";
+  //   evt.currentTarget.classNameName += " active";
+  // }
 
   return (
     <>
@@ -124,42 +124,41 @@ function App() {
             <h1>Sobre mim</h1>
 
             <div className="tab">
-              <button className="tablinks" onClick="aboutMe(event, 'form')">Formação</button>
-              <button className="tablinks" onClick="aboutMe(event, 'qual')">Qualificações</button>
-              <button className="tablinks" onClick="aboutMe(event, 'inter')">Interesses</button>
+              <button className="tablinks" onclick="window.location.href='#formacao';">Formação</button>
+              <button className="tablinks">Qualificações</button>
+              <button className="tablinks">Interesses</button>
             </div>
 
-            <div id="form" className="tabcontent">
-              <h3></h3>
-              <p>Formada com honras como Bacharela em Sistemas de Informação,
-                pela Universidade Federal do Acre em 2017. Trabalho de Conclusão de
-                Curso 'Avaliação de Comunicabilidade no Ambiente Virtual de Aprendizagem
-                da Universidade Federal do Acre' pode ser lido
-                <a href="https://drive.google.com/file/d/1zewNSrv3oDyFIjkTxYgs39SFdJDsXwEH/view?usp=sharing"
-                  target="_blank" className="tcc">aqui.</a></p>
-            </div>
+            <div className="aboutMeContent">
+              <div id="formacao">
+                <p>Formada com honras como Bacharela em Sistemas de Informação,
+                  pela Universidade Federal do Acre em 2017. Trabalho de Conclusão de
+                  Curso 'Avaliação de Comunicabilidade no Ambiente Virtual de Aprendizagem
+                  da Universidade Federal do Acre' pode ser lido
+                  <a href="https://drive.google.com/file/d/1zewNSrv3oDyFIjkTxYgs39SFdJDsXwEH/view?usp=sharing"
+                    target="_blank" className="tcc"> aqui.</a></p>
+              </div>
+              
+              <div id="qualificacoes">
+                <p>— Treinamento em desenvolvimento Full Stack - Gama Academy, 120h, 2021.</p>
+                <p>— Responsive Web Design - freeCodeCamp, 300h, 2021.</p>
+                <p>— Especialização em Marketing e Publicidade - Universidade da Amazônia, cursando.</p>
+                <p>— CorelDRAW X7 - Escola Aberta de Informática/SENAC, 30h, 2020.</p>
+                <p>— Adobe Photoshop CC - Escola Aberta de Informática/SENAC, 40h, 2019.</p>
+                <p>— Treinamento em Marketing Digital - Instituto Euvaldo Lodi IEL/NR-AC, 12h, 2019.</p>
+                <p>— Inglês - Centro de Estudo de Línguas do Estado do Acre, 2018 - 2019.</p>
+                <p>— Francês - Centro de Estudo de Línguas do Estado do Acre, 2015 - 2018.</p>
+                <p>— Bacharelado em Sistemas de Informação - Universidade Federal do Acre, 2013 - 2017.</p>
+              </div>
 
-            <div id="qual" className="tabcontent">
-              <h3></h3>
-              <p>— Treinamento em desenvolvimento Full Stack - Gama Academy, 120h, 2021.</p>
-              <p>— Responsive Web Design - freeCodeCamp, 300h, 2021.</p>
-              <p>— Especialização em Marketing e Publicidade - Universidade da Amazônia, cursando.</p>
-              <p>— CorelDRAW X7 - Escola Aberta de Informática/SENAC, 30h, 2020.</p>
-              <p>— Adobe Photoshop CC - Escola Aberta de Informática/SENAC, 40h, 2019.</p>
-              <p>— Treinamento em Marketing Digital - Instituto Euvaldo Lodi IEL/NR-AC, 12h, 2019.</p>
-              <p>— Inglês - Centro de Estudo de Línguas do Estado do Acre, 2018 - 2019.</p>
-              <p>— Francês - Centro de Estudo de Línguas do Estado do Acre, 2015 - 2018.</p>
-              <p>— Bacharelado em Sistemas de Informação - Universidade Federal do Acre, 2013 - 2017.</p>
+              <div id="interesses">
+                <p>— Desenvolvimento front end.</p>
+                <p>— Desenvolvimento web responsivo.</p>
+                <p>— UX/UI.</p>
+                <p>— Comunicabilidade e usabilidade de interfaces.</p>
+              </div>
             </div>
-
-            <div id="inter" className="tabcontent">
-              <h3></h3>
-              <p>— Desenvolvimento front end.</p>
-              <p>— Desenvolvimento web responsivo.</p>
-              <p>— UX/UI.</p>
-              <p>— Comunicabilidade e usabilidade de interfaces.</p>
-            </div>
-
+     
           </div>
         </section>
 
