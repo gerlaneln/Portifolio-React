@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { Scrollspy } from "@makotot/ghostui";
 import jobsnet from './img/jobsnet.png';
 
 function App() {
@@ -76,40 +76,44 @@ function App() {
   return (
     <>
       <nav>
-        <a href="#first">
-          <div className="tooltip">
-            <img src="https://img.icons8.com/material-outlined/48/000000/home--v2.png" />
-            <span className="tooltiptext">Início</span>
-          </div>
-        </a>
-        <a href="#second">
-          <div className="tooltip">
-            <img src="https://img.icons8.com/material-outlined/48/000000/info.png" />
-            <span className="tooltiptext">Sobre Mim</span>
-          </div>
-        </a>
-        <a href="#third">
-          <div className="tooltip">
-            <img src="https://img.icons8.com/material-outlined/48/000000/folder-invoices.png" />
-            <span className="tooltiptext">Projetos</span>
-          </div>
-        </a>
-        <a href="#fourth">
-          <div className="tooltip">
-            <img src="https://img.icons8.com/material-outlined/48/000000/contacts.png" />
-            <span className="tooltiptext">Contato</span>
-          </div>
-        </a>
-        <a href="#fifth">
-          <div className="tooltip">
-            <img src="https://img.icons8.com/material-outlined/48/000000/toolbox.png" />
-            <span className="tooltiptext">Créditos</span>
-          </div>
-        </a>
+        <ul>
+          
+            <li>
+              <a href="#home">
+                Início
+                {/* <div className="tooltip">
+                <img src="https://img.icons8.com/material-outlined/48/000000/home--v2.png" />
+                <span className="tooltiptext">Início</span>
+              </div> */}
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                Sobre Mim
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                Projetos
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                Contato
+              </a>
+            </li>
+            <li>
+              <a href="#credit">
+                Créditos
+              </a>
+            </li>
+          
+        </ul>
       </nav>
 
-      <div className='container'>
-        <div id='first'>
+      <main>
+
+        <section id='home' className='home'>
           <div className="bg"></div>
           <div className="bg bg2"></div>
           <div className="bg bg3"></div>
@@ -117,9 +121,9 @@ function App() {
             <h1 className="hide">Olá, meu nome é Gerlâne</h1>
             <p className="hide">e esse é o meu portifólio</p>
           </div>
-        </div>
+        </section>
 
-        <section id="second">
+        <section id='about' className='about'>
           <div id="about-myself" className="content">
             <h1>Sobre mim</h1>
 
@@ -162,7 +166,7 @@ function App() {
           </div>
         </section>
 
-        <section id="third">
+        <section id='projects' className='projects'>
           <div className="content">
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
@@ -205,7 +209,7 @@ function App() {
           </div>
         </section>
 
-        <section id="fourth">
+        <section id='contact' className='contact'>
           <div className="content" id="four">
             <h1>Contato</h1>
             <div className="grid" id="contatoDiv">
@@ -267,7 +271,7 @@ function App() {
           </div>
         </section>
 
-        <section id="fifth">
+        <section id='credit' className='credit'>
           <div className="content" id="five">
             <h1>Créditos</h1>
             <p>Todo o conteúdo que não desenvolvido por mim, foi retirado de fontes open source.</p>
@@ -301,7 +305,7 @@ function App() {
             </table>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 }
