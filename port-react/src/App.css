@@ -8,7 +8,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
@@ -16,10 +15,10 @@ html {
 body {
   margin: 0;
 }
-
+/* 
 html,body {
   user-select:none;
-}
+} */
 
 nav{
   margin: 1em;
@@ -143,6 +142,10 @@ main{
   display: block;
 }
 
+h1{
+  margin-top: 3em;
+}
+
 #home{
   display: flex;
   top: 0;
@@ -152,6 +155,12 @@ main{
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#section-content{
+  margin-top: 7em;
+  margin-left: 3em;
+  margin-right: 3em;
 }
 
 #about{
@@ -297,6 +306,11 @@ main{
 }
 
 /*terceira página*/
+
+.proj-cards{
+  padding: 1em;
+  overflow-y: auto;
+}
 
 .card{
   width: 55%;
