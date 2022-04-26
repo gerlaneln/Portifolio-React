@@ -34,11 +34,8 @@ nav a {
 }
 
 nav a:hover{
-  color: #00BCD4;
-}
-
-nav a:active{
-  color: #00BCD4;
+  /* color: #134074; */
+  letter-spacing: 0.1em;
 }
 /* 
 nav img{
@@ -57,6 +54,27 @@ nav {
   justify-content: space-around;
   width: 100vw;
 }
+
+.active-scroll-spy {
+  background-color: #EEEEFF;
+  border-radius: 15px;
+  font-size: larger;
+}
+
+@media only screen and (max-width: 760px) {
+  li{
+    display: block;
+  }
+}
+
+/*
+#C4B7CB lavanda
+#210124 roxo escuro
+#8b687f violeta chinesa
+#134074 indigo dye
+#896978 lavanda antiga
+#EEEEFF lavanda web
+*/
 
 /* .tooltip {
   position: relative;

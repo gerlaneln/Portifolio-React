@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ScrollSpy from "react-ui-scrollspy";
 import jobsnet from './img/jobsnet.png';
 
 function App() {
@@ -76,42 +77,36 @@ function App() {
     <>
       <nav>
         <ul>
-          
-            <li>
-              <a href="#home">
-                Início
-                {/* <div className="tooltip">
-                <img src="https://img.icons8.com/material-outlined/48/000000/home--v2.png" />
-                <span className="tooltiptext">Início</span>
-              </div> */}
-              </a>
-            </li>
-            <li>
-              <a href="#about">
-                Sobre Mim
-              </a>
-            </li>
-            <li>
-              <a href="#projects">
-                Projetos
-              </a>
-            </li>
-            <li>
-              <a href="#contact">
-                Contato
-              </a>
-            </li>
-            <li>
-              <a href="#credit">
-                Créditos
-              </a>
-            </li>
-          
+          <li data-to-scrollspy-id="home">
+            <a href="#home">
+              Início
+            </a>
+          </li>
+          <li data-to-scrollspy-id="about">
+            <a href="#about">
+              Sobre Mim
+            </a>
+          </li>
+          <li data-to-scrollspy-id="projects">
+            <a href="#projects">
+              Projetos
+            </a>
+          </li>
+          <li data-to-scrollspy-id="contact">
+            <a href="#contact">
+              Contato
+            </a>
+          </li>
+          <li data-to-scrollspy-id="credit">
+            <a href="#credit">
+              Créditos
+            </a>
+          </li>
         </ul>
       </nav>
 
       <main>
-
+      <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
         <section id='home' className='home'>
           <div className="bg"></div>
           <div className="bg bg2"></div>
@@ -310,6 +305,7 @@ function App() {
             </table>
           </div>
         </section>
+      </ScrollSpy>
       </main>
     </>
   );
