@@ -9,6 +9,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ScrollSpy from "react-ui-scrollspy";
 import jobsnet from './img/jobsnet.png';
+import * as mdb from 'mdb-ui-kit';
+// npm i mdb-ui-kit
 
 function App() {
 
@@ -75,8 +77,43 @@ function App() {
 
   return (
     <>
-      <nav>
-        <ul>
+      {/* <div className='' class="sidenav" data-mdb-right="true">
+        <ul class="sidenav-menu">
+          <li class="sidenav-item">
+            <a class="sidenav-link">
+              <i class="far fa-smile fa-fw me-3"></i><span>Link 1</span></a>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link"><i class="fas fa-grin fa-fw me-3"></i><span>Category 1</span></a>
+            <ul class="sidenav-collapse show">
+              <li class="sidenav-item">
+                <a class="sidenav-link">Link 2</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link">Link 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidenav-item">
+            <a class="sidenav-link"><i class="fas fa-grin-wink fa-fw me-3"></i><span>Category
+              2</span></a>
+            <ul class="sidenav-collapse">
+              <li class="sidenav-item">
+                <a class="sidenav-link">Link 4</a>
+              </li>
+              <li class="sidenav-item">
+                <a class="sidenav-link">Link 5</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <button data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1" class="btn btn-primary"
+          aria-controls="#sidenav-1" aria-haspopup="true">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div> */}
+      <nav className='navbar'>
+        <ul id="menu">
           <li data-to-scrollspy-id="home">
             <a href="#home">
               Início

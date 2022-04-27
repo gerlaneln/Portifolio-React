@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Open+Sans&display=swap');
+/* @import '~mdb-ui-kit/css/mdb.min.css'; */
 
 * {
   margin: 0;
@@ -15,16 +16,17 @@ html {
 body {
   margin: 0;
 }
-/* 
-html,body {
-  user-select:none;
-} */
 
-nav{
+.navbar{
   margin: 1em;
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
 }
 
-nav a {
+.navbar a {
   font-family: 'Open Sans', sans-serif;  
   color: black;
   font-weight: bold;
@@ -33,26 +35,11 @@ nav a {
   text-align: center;
 }
 
-nav a:hover{
-  /* color: #134074; */
+.navbar a:hover{
   letter-spacing: 0.1em;
 }
-/* 
-nav img{
-  width: 50%;
-  height: auto;
-} */
-
-li {
+.navbar li {
   display: inline;
-}
-
-nav {
-  position: fixed;
-  z-index: 50;
-  display: flex;
-  justify-content: space-around;
-  width: 100vw;
 }
 
 .active-scroll-spy {
@@ -62,9 +49,8 @@ nav {
 }
 
 @media only screen and (max-width: 760px) {
-  li{
-    display: block;
-  }
+
+  
 }
 
 /*
